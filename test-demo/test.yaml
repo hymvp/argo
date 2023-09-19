@@ -27,7 +27,6 @@ metadata:
   name: docker-hello-world-svc
   annotations:
     oci.oraclecloud.com/load-balancer-type: "lb"
-    service.beta.kubernetes.io/oci-load-balancer-internal: "true"
     service.beta.kubernetes.io/oci-load-balancer-shape: flexible
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 100Mbps
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 200Mbps
