@@ -21,7 +21,7 @@ spec:
         - containerPort: 80
       tolerations: 
       - key: "oci.oraclecloud.com/oke-is-preemptible"
-        operator: "Exists"
+        operator: "Equal"
         effect: "NoSchedule"
 ---
 apiVersion: v1
