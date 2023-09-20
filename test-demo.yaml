@@ -20,8 +20,9 @@ spec:
         ports:
         - containerPort: 80
       tolerations: 
-      - key: "oci.oraclecloud.com/oke-is-preemptible"
+      - key: "oci.oraclecloud.com"
         operator: "Equal"
+        value: "oke-is-preemptible"
         effect: "NoSchedule"
 ---
 apiVersion: v1
