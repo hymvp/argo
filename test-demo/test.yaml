@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: docker-hello-world
-  replicas: 5
+  replicas: 10
   template:
     metadata:
       labels:
@@ -20,6 +20,12 @@ spec:
         image: scottsbaldwin/docker-hello-world:latest
         ports:
         - containerPort: 80
+
+      tolerations:
+        - key: "oci.oraclecloud.com/oke-is-preemptible"
+          operator: "Exists"
+          effect: "NoSchedule"
+
 ---
 apiVersion: v1
 kind: Service
